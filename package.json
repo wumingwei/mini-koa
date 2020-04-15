@@ -11,6 +11,7 @@
   "author": "wu_mingwei <wu_mingwei@yeah.net> (http://github.com/wumingwei)",
   "license": "MIT",
   "dependencies": {
+    "autocannon": "^4.6.0",
     "debug": "^4.1.1",
     "koa-bodyparser": "^4.3.0",
     "koa-log4": "^2.3.2",
