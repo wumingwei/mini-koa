@@ -6,8 +6,6 @@ module.exports = async function (ctx, next) {
     // 调用下一个 middleware
     await next();
 
-    rwew;
-
     // 处理响应结果
     // 如果直接写入在 body 中，则不作处理
     // 如果写在 ctx.body 为空，则使用 state 作为响应

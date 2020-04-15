@@ -1,5 +1,8 @@
 // demo 测试接口
 module.exports = async (ctx, next) => {
+  const { a } = ctx.query;
+  console.log(`get参数：a=${a}`);
+
   ctx.state.data = {
     list: [
       { name: '001', value: '列表001' },
