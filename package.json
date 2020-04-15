@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "pm2 start process.prod.json --no-daemon",
-    "dev": "nodemon --config nodemon.json app.js"
+    "dev": "nodemon --config nodemon.json app.js",
+    "test": "autocannon -c 100 -d 5 -p 2 http://localhost:5757/weapp/demo?a=b",
+    "prof-test": "node --prof app.js"
   },
   "keywords": [],
   "author": "wu_mingwei <wu_mingwei@yeah.net> (http://github.com/wumingwei)",
@@ -18,6 +20,7 @@
     "koa-router": "^8.0.8",
     "koa2": "^2.0.0-alpha.7",
     "koa2-cors": "^2.0.6",
+    "loadtest": "^5.0.2",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "nodemon": "^2.0.3",
