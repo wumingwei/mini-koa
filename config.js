@@ -9,6 +9,9 @@ const CONF = {
 
   // 跨域白名单，不包含prefix前缀
   allowCORSWhiteList: ['/demo', '/login'],
+
+  // 登录态有效期
+  loginExpires: 7200,
 };
 
 module.exports = CONF;

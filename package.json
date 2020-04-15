@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run server",
-    "server": "nodemon app.js"
+    "start": "pm2 start process.prod.json --no-daemon",
+    "dev": "nodemon --config nodemon.json app.js"
   },
   "keywords": [],
   "author": "wu_mingwei <wu_mingwei@yeah.net> (http://github.com/wumingwei)",
@@ -19,6 +19,7 @@
     "koa2-cors": "^2.0.6",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "pm2": "^4.2.3"
   }
 }

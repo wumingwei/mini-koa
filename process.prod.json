@@ -1,0 +1,15 @@
+{
+  "name": "main server",
+  "script": "app.js",
+  "cwd": "./",
+  "exec_mode": "fork",
+  "watch": true,
+  "instances": "max",
+  "ignore_watch": ["tmp"],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "engines": {
+    "node": ">=7.6"
+  }
+}
