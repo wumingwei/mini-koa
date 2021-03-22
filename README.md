@@ -1,6 +1,6 @@
 # mini-server
 
-最简基于 koa 实现的 node server。
+基于 koa 实现的最简 node server
 
 ## 下载源码
 
@@ -15,11 +15,8 @@ git clone https://github.com/wumingwei/mini-server.git
 #### 安装依赖
 
 ```bash
-# 安装全局依赖
-npm i nodemon -g
-
-# 安装项目依赖
-npm i
+npm i nodemon -g # 安装全局依赖
+npm i            # 安装项目依赖
 ```
 
 #### 启动项目
@@ -29,9 +26,9 @@ npm i
 npm start
 ```
 
-- 示例代码部署目录：`/data/release/node-weapp-demo`
-- 运行示例的 Node 版本：`v8.1.0`
-- Node 进程管理工具：`pm2`
+- 示例代码部署目录：     `/data/release/node-weapp-demo`
+- 运行示例的 Node 版本： `v8.1.0`
+- Node 进程管理工具：    `pm2`
 
 ## 项目结构
 
@@ -57,11 +54,9 @@ koa-weapp-demo
     └── index.js
 ```
 
-`app.js` 是 Demo 的主入口文件，Demo 使用 Koa 框架，在 `app.js` 创建一个 Koa 实例并响应请求。
-
-`routes/index.js` 是 Demo 的路由定义文件
-
-`controllers` 存放 Demo 所有业务逻辑的目录，`index.js` 不需要修改，他会动态的将 `controllers` 文件夹下的目录结构映射成 modules 的 Object，例如 Demo 中的目录将会被映射成如下的结构：
+`app.js`:          Demo 的主入口文件，Demo 使用 Koa 框架，在 `app.js` 创建一个 Koa 实例并响应请求。
+`routes/index.js`: Demo 的路由定义文件
+`controllers`:     存放 Demo 所有业务逻辑的目录，`index.js` 不需要修改，他会动态的将 `controllers` 文件夹下的目录结构映射成 modules 的 Object，例如 Demo 中的目录将会被映射成如下的结构：
 
 ```javascript
 // index.js 输出
@@ -77,16 +72,11 @@ koa-weapp-demo
 
 ```javascript
 {
-  serverHost: 'localhost',// 项目启动的地址
-  port: '5757',  // 项目启动的端口
-  networkTimeout: 30000,// 请求超时设置
-
-  prefix: '/weapp',// api前缀
-
-  // 跨域白名单，不包含prefix前缀
-  allowCORSWhiteList: ['/demo', '/login'],
-
-  // 登录态有效期
-  loginExpires: 7200,
+  serverHost: 'localhost',                 // 项目启动的地址
+  port: '5757',                            // 项目启动的端口
+  networkTimeout: 30000,                   // 请求超时设置
+  prefix: '/weapp',                        // api前缀
+  allowCORSWhiteList: ['/demo', '/login'], // 跨域白名单，不包含prefix前缀
+  loginExpires: 7200,                      // 登录态有效期
 }
 ```
