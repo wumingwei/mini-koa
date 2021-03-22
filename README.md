@@ -72,11 +72,11 @@ koa-weapp-demo
 
 ```javascript
 {
-  serverHost: 'localhost',                 // 项目启动的地址
-  port: '5757',                            // 项目启动的端口
-  networkTimeout: 30000,                   // 请求超时设置
-  prefix: '/weapp',                        // api前缀
-  allowCORSWhiteList: ['/demo', '/login'], // 跨域白名单，不包含prefix前缀
+  serverHost: 'localhost',                 // 项目启动的host
+  port: '5757',                            // 项目启动的port
+  prefix: '/weapp',                        // api统一前缀，访问时需要加在api path前端
   loginExpires: 7200,                      // 登录态有效期
+  networkTimeout: 30000,                   // 请求超时设置
+  allowCORSWhiteList: ['/demo', '/login'], // 跨域白名单，不包含prefix前缀
 }
 ```
